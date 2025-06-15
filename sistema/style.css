@@ -1,0 +1,19 @@
+body {
+    background: url("img.jpg") no-repeat center center fixed; /* Centrar y fijar la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+}
+
+h1, a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem; /* Usar unidades relativas para el tamaño de fuente */
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    h1, a {
+        font-size: 1.5rem; /* Ajustar el tamaño de fuente en pantallas más pequeñas */
+    }
+}

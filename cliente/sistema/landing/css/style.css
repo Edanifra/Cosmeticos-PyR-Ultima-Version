@@ -1,0 +1,126 @@
+.carru {
+    display: flex;
+    position: relative;
+    width: 80%;
+    height: 430px;
+    justify-content: center;
+}
+
+.carru img {
+    width: 100%; /* Ajusta el ancho a 100% del contenedor */
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.carru img:hover {
+    cursor: pointer;
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.catalogo-link {
+    position: absolute;
+    bottom: 10px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    text-decoration: none; /* Sin subrayado */
+    color: #000; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 10; /* Asegura que esté por encima de las imágenes */
+}
+
+.producto {
+    position: relative;
+    display: inline-block; /* Asegúrate de que el contenedor tenga un tamaño adecuado */
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    margin: 10px; /* Espaciado entre productos */
+}
+
+.descuento {
+    position: absolute;
+    top: 10px; /* Ajusta según sea necesario */
+    left: 10px; /* Ajusta según sea necesario */
+    background-color: rgba(238, 255, 0, 0.7); /* Fondo semi-transparente */
+    color: black; /* Color del texto */
+    padding: 5px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Negrita */
+}
+
+
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Tamaño de fuente para el nombre de la marca */
+    color: #333; /* Color del texto */
+}
+
+.navbar-nav > li > a {
+    color: #333; /* Color del texto de los enlaces */
+    padding: 15px 20px; /* Espaciado interno */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.navbar-nav > li > a:hover {
+    background-color: #e2e6ea; /* Color de fondo al pasar el ratón */
+    color: #000; /* Color del texto al pasar el ratón */
+}
+
+.navbar-toggle {
+    border-color: #ddd; /* Color del borde del botón de colapso */
+}
+
+.icon-bar {
+    background-color: #888; /* Color de las barras del botón de colapso */
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+    padding: 10px 20px; /* Espaciado superior e inferior reducido */
+}
+
+.navbar-header {
+    float: left; /* Alinear la marca a la izquierda */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Tamaño de fuente para el nombre de la marca */
+    color: #333; /* Color del texto */
+}
+
+.navbar-nav {
+    float: right; /* Alinear los elementos del menú a la derecha */
+}
+
+.navbar-nav > li > a {
+    color: #333; /* Color del texto de los enlaces */
+    padding: 10px 15px; /* Espaciado interno reducido */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.navbar-nav > li > a:hover {
+    background-color: #e2e6ea; /* Color de fondo al pasar el ratón */
+    color: #000; /* Color del texto al pasar el ratón */
+}
+
+.navbar-toggle {
+    border-color: #ddd; /* Color del borde del botón de colapso */
+}
+
+.icon-bar {
+    background-color: #888; /* Color de las barras del botón de colapso */
+}

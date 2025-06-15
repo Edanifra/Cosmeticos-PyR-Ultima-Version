@@ -1,0 +1,700 @@
+/*************************************** PAGINADOR *******************************************/
+.paginador ul {
+    padding: 15px;
+    list-style: none;
+    background: #fff;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+.paginador a {
+    color: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 35px;
+    margin: 0 5px; /* Espaciado entre los enlaces */
+}
+.paginador a:hover {
+    background: #ddd;
+}
+.form_fecha_rep{
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    align-items: center;
+}
+
+.form_fecha_rep input{
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+.carta_specs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    padding:5%;
+    border: 1px solid #e5cfcf;
+    border-radius: 5px;
+    max-height: 110px;
+}
+.pageSelected, .pageSelected2 {
+    color: white;
+    padding: 5px;
+    border: 1px solid;
+    text-align: center;
+    width: 35px;
+}
+.pageSelected {
+    background: #428bca;
+    border-color: #428bca;
+}
+.pageSelected2 {
+    background: #b1c1cf;
+    border-color: #b1c1cf;
+}
+
+/*************************************** PAGINADOR *******************************************/
+.boton_agregar {
+    margin-left: 15px;
+    padding: 10px;
+    background: #428bca;
+    color: white;
+    border-radius: 5px;
+}
+
+/************************************* BUSCADOR ***********************************************/
+.form_search {
+    display: flex;
+    justify-content: flex-end; /* Cambia float por flexbox */
+    background: initial;
+    padding: 10px;
+}
+.form_search input {
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #c7aeae;
+    flex: 1; /* Permite que el input ocupe el espacio disponible */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+}
+.form_search .btn_search {
+    background: #1faac8;
+    color: white;
+    padding: 0 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+/***************** VENTAS ********************/
+.datos_cliente, .datos_venta, .title_page {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#detalle_venta tr {
+    background-color: #FFF !important;
+}
+#detalle_venta td {
+    border-bottom: 1px solid #CCC;
+}
+.datos {
+    background-color: #e3ecef;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid #78909C;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.action_cliente {
+    display: flex;
+    align-items: center;
+}
+.datos label {
+    margin: 5px auto;
+}
+.wd20 { width: 20%; }
+.wd25 { width: 25%; }
+.wd30 { width: 30%; }
+.wd40 { width: 40%; }
+.wd60 { width: 60%; }
+.wd100 { width: 100%; }
+#div_registro_cliente, #add_product_venta {
+    display: none;
+}
+.displayN {
+    display: none;
+}
+.tbl_venta {
+    max-width: 900px;
+    margin: auto;
+}
+.tbl_venta tfoot td {
+    font-weight: bold;
+}
+.textright { text-align: right; }
+.textcenter { text-align: center; }
+.textleft { text-align: left; }
+.btn_anular {
+    background-color: #f36a6a;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 3px;
+    color: #FFF;
+}
+
+/***************** VENTAS ********************/
+.cabezal {
+    text-align: center;
+    padding-top: 10px;
+    background: #a5678e;
+    color: white;
+}
+.btn_new_cliente {
+    padding: 5px 5px;
+    margin-left: 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Consultas de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .paginador a, .pageSelected, .pageSelected2 {
+        width: auto; /* Permite que el ancho se ajuste automáticamente */
+        padding: 8px; /* Aumenta el área clickeable */
+    }
+    .wd20, .wd25, .wd30, .wd40, .wd60 {
+        width: 100%; /* Hace que los elementos ocupen el 100% en pantallas pequeñas */
+    }
+    .form_search {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+    .form_search input {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        width: 100%; /* Permite que el input ocupe todo el ancho */
+    }
+    .form_search .btn_search {
+        width: 100%; /* El botón también ocupa todo el ancho */
+        margin-top: 10px; /* Espacio arriba del botón */
+    }
+}
+
+/* ESTILOS DE LOS REPORTES */
+
+#tabla_reporte_ventas{
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.membrete{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.tituloReporte{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.fecha{
+    height: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.membrete .fecha h4{
+    background-color: #089648;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.membrete span{
+    display: flex;
+    flex-direction: column;
+}
+
+.membrete img{
+    width: 200px;
+    object-fit: contain;
+}
+
+/* ESTILOS DE LOS REPORTES */
+
+.btn_general{
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.btn_general:hover{
+    padding: 15px;
+}
+
+.approved{
+    background-color: #58cd92;
+    color: white;
+}
+
+.denied{
+    background-color: #df1212;
+    color: white;
+}
+
+.btn_new {
+    padding: 10px;
+    margin: 15px;
+    background: #5f8d53;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Asegura que los botones se alineen correctamente */
+}
+.btn_new:hover {
+    background: #7fbd70;
+    color: #fff;
+}
+.pagada {
+    padding: 5px;
+    background: green;
+    border-radius: 10px;
+    color: white;
+    font-style: italic;
+}
+.anulada {
+    padding: 5px;
+    background: red;
+    border-radius: 10px;
+    color: white;
+    font-style: italic;
+}
+.btn-anulada {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    cursor: default;
+    background: #A4A4A4;
+    color: #CCC;
+    border: 1px solid #A4A4A4;
+    outline: none;
+}
+.search_date {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: white;
+    display: inline-block;
+    border-radius: 6px;
+    width: 100%; /* Permite que el contenedor ocupe el 100% del ancho */
+    max-width: 400px; /* Establece un ancho máximo */
+}
+.search_date input[type="date"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: black;
+    background: #f7dddd;
+    width: 100%; /* Permite que el input ocupe el 100% del ancho del contenedor */
+}
+.btn_view {
+    background: #6868f9;
+    color: white;
+    border: 1px solid #6868f9;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.btn_view:hover {
+    background: #8686fa;
+}
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal_centrao {
+    display: flex;
+}
+.bodyModal {
+    width: 90%; /* Permite que el modal ocupe el 90% del ancho en pantallas pequeñas */
+    max-width: 600px; /* Establece un ancho máximo para el modal */
+    height: auto; /* Cambia a auto para que el alto se ajuste al contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px; /* Añade padding para el contenido */
+}
+.modalTitle {
+    margin-top: 1.5em;
+}
+.modalContent {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+/* Consultas de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .btn_new {
+        width: 100%; /* Asegura que los botones ocupen el 100% del ancho en pantallas pequeñas */
+        margin: 10px 0; /* Ajusta el margen para mejor espaciado */
+    }
+    .bodyModal {
+        width: 90%; /* Permite que el modal ocupe el 90% del ancho en pantallas pequeñas */
+    }
+    .search_date {
+        width: 100%; /* Asegura que el contenedor de búsqueda ocupe el 100% */
+    }
+}
+
+.modalButtons {
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.btn_borrar {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: #e54747;
+    margin-right: 1em;
+}
+
+.btn_cerrar {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: #4c6aec;
+}
+
+#form_del_product {
+    width: 90%; /* Cambiado a porcentaje para ser más responsivo */
+    max-width: 420px; /* Limitar el ancho máximo */
+    text-align: center;
+}
+
+#form_del_product button {
+    margin-right: 2em; /* Ajustado a em para ser más flexible */
+}
+
+.div_acciones {
+    display: contents;
+}
+
+.alertDelProduct {
+    color: black;
+}
+
+.pedido_pendiente {
+    padding: 1em;
+    border-radius: 10px;
+    background: #6262cf;
+    color: white;
+    font-style: italic;
+}
+
+.pedido_aprobado {
+    padding: 1em;
+    border-radius: 10px;
+    background: #0b9649;
+    color: white;
+    font-style: italic;
+}
+
+.pedido_cancelado {
+    padding: 1em;
+    border-radius: 10px;
+    background: #db0c0c;
+    color: white;
+    font-style: italic;
+}
+
+#txt_estado_pedido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 5%;
+}
+
+#txt_acciones {
+    text-align: center;
+}
+
+.contSeparar {
+    padding: inherit;
+    border-radius: 5px;
+}
+
+.table_headers {
+    background: #33539E;
+    color: white;
+}
+
+.centrarContentPanel {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonFormat {
+    width: 100%; /* Cambiado a 100% para que ocupe todo el espacio disponible */
+    max-width: 200px; /* Limitar el ancho máximo */
+}
+
+.contentAlert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: wheat;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 5px;
+    color: black;
+    font-weight: 900;
+}
+
+.espHeaders {
+    width: 100%; /* Cambiado a 100% para ser más flexible */
+    max-width: 200px; /* Limitar el ancho máximo */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .modalButtons {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .buttonFormat {
+        width: 80%; /* Ajustar el ancho en pantallas pequeñas */
+    }
+
+    #form_del_product {
+        width: 95%; /* Aumentar el ancho en pantallas pequeñas */
+    }
+
+    #form_del_product button {
+        margin-right: 0; /* Eliminar margen en pantallas pequeñas */
+        margin-bottom: 1em; /* Agregar margen inferior */
+    }
+}
+
+
+
+
+/*********   ESTILOS TABLA VENTAS   *********/
+
+
+.tbl_venta {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem; /* Cambiado a rem para ser más flexible */
+    font-family: Arial, sans-serif;
+}
+
+.table_headers th {
+    background-color: #73a266; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 0.625em; /* Cambiado a em */
+    text-align: left;
+}
+
+.tbl_venta th, .tbl_venta td {
+    border: 1px solid #ddd; /* Bordes de las celdas */
+    padding: 0.5em; /* Cambiado a em */
+}
+
+.tbl_venta tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+.tbl_venta tr:hover {
+    background-color: #ddd; /* Color de fondo al pasar el ratón */
+}
+
+.textright {
+    text-align: right; /* Alineación a la derecha */
+}
+
+.link_add {
+    color: #4CAF50; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.link_add:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+#txt_cod_producto, #txt_cant_producto {
+    width: 100%; /* Ancho completo */
+    padding: 0.5em; /* Cambiado a em */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    border: 1px solid #ccc; /* Bordes de los inputs */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+#txt_cod_producto:disabled, #txt_cant_producto:disabled {
+    background-color: #e9ecef; /* Color de fondo para inputs deshabilitados */
+}
+
+/*********   ESTILOS TABLA VENTAS   *********/
+.photo {
+    border: 2px solid #ccc; /* Borde del recuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    position: relative; /* Para posicionar la X */
+    width: 100%; /* Cambiado a 100% para ser responsivo */
+    max-width: 200px; /* Limitar el ancho máximo */
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    display: flex; /* Para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+.prevPhoto {
+    display: none; /* Ocultar por defecto */
+    position: relative; /* Para posicionar la X */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+}
+
+.delPhoto {
+    position: absolute; /* Posicionar la X en la esquina */
+    top: 5px; /* Margen superior */
+    right: 5px; /* Margen derecho */
+    background-color: red; /* Color de fondo de la X */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Hacerla circular */
+    width: 25px; /* Ancho del círculo */
+    height: 25px; /* Alto del círculo */
+    display: flex; /* Para centrar el texto */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    z-index: 10; /* Asegúrate de que la X esté por encima */
+}
+
+#imgPreview {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    object-fit: cover; /* Mantener la relación de aspecto */
+    border-radius: 8px; /* Bordes redondeados */
+    display: none; /* Ocultar por defecto */
+}
+
+.reporte {
+    height: auto; /* Cambiado a auto para ser más flexible */
+}
+
+.orderForm {
+    text-align: center;
+}
+
+.btn_excel {
+    background: #09bf5c;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    width: 100%;
+    max-width: 50%;
+    border-radius: 4px;
+}
+
+.btn_excel:hover {
+    background: #089648;
+    color: white;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .tbl_venta th, .tbl_venta td {
+        padding: 0.5em; /* Ajustar espaciado en pantallas pequeñas */
+    }
+
+    .photo {
+        max-width: 100%; /* Hacer la foto más flexible */
+        height: auto; /* Mantener proporción */
+    }
+
+    .btn_excel {
+        width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+        margin: 0.5em 0; /* Espaciado vertical */
+    }
+}
+
+.pedido_pendiente {
+    padding: 1em; /* Cambiado a em */
+    border-radius: 10px;
+    background: #80808f;
+    color: white;
+    font-style: italic;
+}
+
+.pedido_aprobado {
+    padding: 1em; /* Cambiado a em */
+    border-radius: 10px;
+    background: #0b9649;
+    color: white;
+    font-style: italic;
+}
+
+.pedido_cancelado {
+    padding: 1em; /* Cambiado a em */
+    border-radius: 10px;
+    background: #db0c0c;
+    color: white;
+    font-style: italic;
+}
+
+#txt_estado_pedido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 5%; /* Cambiado a porcentaje para ser más flexible */
+}
+
+
+
+/********* ESTILOS REPRODUCTOR DE VIDEO **********/
+
+
+
+/********* ESTILOS REPRODUCTOR DE VIDEO **********/

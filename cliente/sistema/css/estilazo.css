@@ -1,0 +1,561 @@
+.form_carrito {
+    display: contents;
+}
+
+
+
+
+
+
+
+
+/*************************************** PAGINADOR *******************************************/
+.paginador ul {
+    padding: 15px;
+    list-style: none;
+    background: #fff;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+.paginador a {
+    color: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 35px;
+}
+.paginador a:hover {
+    background: #ddd;
+}
+.pageSelected, .pageSelected2 {
+    color: white;
+    padding: 4px;
+    border: 1px solid;
+    text-align: center;
+}
+.pageSelected {
+    background: #428bca;
+    border-color: #428bca;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+}
+.pageSelected2 {
+    background: #b1c1cf;
+    border-color: #b1c1cf;
+}
+
+/*************************************** PAGINADOR *******************************************/
+
+
+
+
+
+
+
+
+
+
+/* MENÚ DE CERRAR SESIÓN EN EL PERFIL*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #76792e;
+}
+
+
+/* MENÚ DE CERRAR SESIÓN EN EL PERFIL*/
+
+
+
+
+
+
+
+
+
+.cant_prod {
+    display: none;
+    width: 60px;
+    padding: 0.5em; /* Cambiado a em para ser más flexible */
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid gray;
+    outline: none;
+    margin-bottom: 0.5em; /* Cambiado a em para ser más flexible */
+}
+
+.label_cantidad {
+    display: none;
+}
+
+.boton_accion {
+    outline: none;
+}
+
+.cant_producto {
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid gray;
+    text-align: center;
+    width: 100%; /* Cambiado a 100% para ser más flexible */
+}
+
+/* MODAL */
+.Modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 999;
+}
+
+.modal_centrao {
+    display: flex;
+}
+
+.bodyModal {
+    width: 90%; /* Cambiado a porcentaje para ser más responsivo */
+    max-width: 500px; /* Limitar el ancho máximo */
+    height: 60%; /* Cambiado a auto para mantener la proporción */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.modalTitle {
+    margin-top: 1.5em;
+}
+
+.modalContent {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.modalButtons {
+    margin: 1em; /* Cambiado a em */
+    padding: 0.5em; /* Cambiado a em */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_cerrar {
+    padding: 0.5em; /* Cambiado a em */
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: #4c6aec;
+}
+
+.datazos {
+    padding: 0.5em; /* Cambiado a em */
+    display: grid;
+    justify-items: center;
+}
+
+.datazos input[type="text"],
+.datazos input[type="number"],
+.datazos input[type="email"],
+.datazos input[type="date"] {
+    padding: 0.5em; /* Cambiado a em */
+    border-radius: 5px;
+    border: 1px solid gray;
+    letter-spacing: 1pt;
+    width: 12em;
+    transition: all 0.5s ease;
+    outline: none;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    right: -8em;
+    position: absolute;
+    width: 142%;
+    justify-content: center;
+    padding: 1em; /* Cambiado a em */
+    margin-top: 1em; /* Cambiado a em */
+    background: #6767d1;
+    color: white;
+}
+
+#txt_boton_perfil {
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.alert_perfil {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1em; /* Cambiado a em */
+    background: #dddd81;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+#li_pedidos {
+    position: relative;
+    right: 33%;
+}
+
+.formato_select{
+    outline: none;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+#li_pedidos a {
+    text-decoration: none;
+    color: white;
+}
+
+.pedido_pendiente {
+    padding: 1em; /* Cambiado a em */
+    border-radius: 10px;
+    background: #80808f;
+    color: white;
+    font-style: italic;
+}
+
+.pedido_aprobado {
+    padding: 1em; /* Cambiado a em */
+    border-radius: 10px;
+    background: #0b9649;
+    color: white;
+    font-style: italic;
+}
+
+.pedido_cancelado {
+    padding: 1em; /* Cambiado a em */
+    border-radius: 10px;
+    background: #db0c0c;
+    color: white;
+    font-style: italic;
+}
+
+#txt_estado_pedido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 5%; /* Cambiado a porcentaje para ser más flexible */
+}
+
+#txt_acciones {
+    text-align: center;
+}
+
+.btn_editar_foto {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background: #494343;
+    padding: 10px; /* Cambiado a em */
+    border-radius: 10px;
+    position: relative;
+    bottom: 20%;
+    transition: all 0.5s ease;
+}
+
+.btn_editar_foto:hover {
+    color: #6d8a7a;
+}
+
+.btn_borrar_foto {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background: #c01e1e;
+    padding: 10px; /* Cambiado a em */
+    border-radius: 10px;
+    position: relative;
+    bottom: 20%;
+    transition: all 0.5s ease;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .bodyModal {
+        width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+    }
+
+    .modalButtons {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    footer {
+        width: 100%; /* Ajustar el ancho del footer en pantallas pequeñas */
+        right: 0; /* Ajustar la posición en pantallas pequeñas */
+    }
+
+    .cant_prod {
+        width: 100%; /* Hacer que el input ocupe todo el ancho disponible */
+    }
+
+    .datazos input[type="text"],
+    .datazos input[type="number"],
+    .datazos input[type="email"],
+    .datazos input[type="date"] {
+        width: 100%; /* Hacer que los inputs ocupen todo el ancho disponible */
+    }
+}
+
+.btn_borrar_foto:hover {
+    color: #6d8a7a;
+}
+
+.login {
+    justify-items: center;
+    gap: 15px;
+    margin: 2em 0; /* Cambiado a em para ser más flexible */
+    width: 90%; /* Cambiado a porcentaje para ser más responsivo */
+    max-width: 270px; /* Limitar el ancho máximo */
+}
+
+.login input {
+    padding: 0.5em; /* Cambiado a em */
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: none;
+    outline: none;
+    width: 100%; /* Asegura que el input ocupe todo el ancho */
+}
+
+.input-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el input y el asterisco */
+    gap: 5px; /* Espacio entre el input y el asterisco */
+}
+
+.required {
+    color: red; /* Color del asterisco */
+}
+
+.modalBotones {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.boton_formato{
+    background-color: #0b9649 !important;
+    border-color: #0b9649 !important;
+}
+
+.boton_formato:hover{
+    background-color: #9ea13d !important;
+    border-color: #9ea13d !important;
+}
+
+.cuerpo_carta {
+    width: 100%; /* Cambiado a 100% para ser más flexible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.descuento {
+    background: yellow;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.titulo_de_carta {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cartita {
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 2em;
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    top: 5%;
+    position: relative; /* Asegúrate de que el contenedor de la tarjeta sea relativo */
+}
+
+.precio_viejo {
+    margin-left: 15px;
+}
+
+.prevPhoto {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Cambiado a 100% para ser más flexible */
+    max-width: 160px; /* Limitar el ancho máximo */
+    height: 150px;
+    border: 1px solid #CCC;
+    position: relative;
+    cursor: pointer;
+    background: url(../img/perfil/homo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+}
+
+.prevPhoto label {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.prevPhoto img {
+    width: 100%;
+    height: 100%;
+}
+
+.upimg, .notBlock {
+    display: none !important;
+}
+
+.errorArchivo {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #cc0000;
+    text-align: center;
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+.delPhoto {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: red;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: 10;
+}
+
+#tbl_list_productos img {
+    width: 50px;
+}
+
+.imgProductoDelete {
+    width: 175px;
+}
+
+.posicion_desc {
+    position: absolute;
+    top: -10px; /* Ajusta este valor según sea necesario */
+    right: -10px; /* Ajusta este valor según sea necesario */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.producto_agotado {
+    display: flex;
+    justify-items: center;
+    height: 100%;
+    align-items: center;
+}
+
+.buscador{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buscador input[type="text"] {
+    margin: 5px 0;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #7a7171;
+    font-style: italic;
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+
+.registro-link {
+    text-decoration: none; 
+    font-weight: 700;
+    color: #0059ff;
+}
+
+.table_headers {
+    background: #33539E;
+    color: white;
+}
+
+.espHeaders {
+    width: 200px;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .login {
+        width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+    }
+
+    .prevPhoto {
+        width: 100%; /* Hacer que el contenedor ocupe todo el ancho disponible */
+    }
+
+    .cuerpo_carta {
+        padding-bottom: 5px; /* Ajustar el espaciado en pantallas pequeñas */
+    }
+
+    .buscador input[type="text"] {
+        width: calc(100% - 10px); /* Ajustar el ancho del input en pantallas pequeñas */
+    }
+}

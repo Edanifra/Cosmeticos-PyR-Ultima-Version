@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../imagenes/intro.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 90%; /* Cambiado a porcentaje para ser más responsivo */
+    max-width: 420px; /* Limitar el ancho máximo */
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    padding: 2em; /* Usar em para el espaciado */
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+}
+
+.wrapper h1 {
+    font-size: 2.25rem; /* Cambiado a rem para ser más flexible */
+    text-align: center;
+}
+
+.wrapper .input_box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 2em 0; /* Cambiado a em para ser más flexible */
+}
+
+.input_box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 1rem; /* Cambiado a rem */
+    padding: 1.25em 2.5em 1.25em 1.25em; /* Usar em para el espaciado */
+    color: #fff;
+}
+
+.seleccion {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    font-size: 1rem; /* Cambiado a rem */
+    padding: 0.5em; /* Cambiado a em */
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.seleccion:hover {
+    background: rgba(255, 255, 255, .4);
+}
+
+.seleccion option {
+    color: black;
+}
+
+.input_box input::placeholder {
+    color: #fff;
+}
+
+.input_box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem; /* Cambiado a rem */
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem; /* Cambiado a rem */
+    margin: -1em 0 1em; /* Cambiado a em */
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 0.3em; /* Cambiado a em */
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 1rem; /* Cambiado a rem */
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register_link {
+    font-size: 0.9rem; /* Cambiado a rem */
+    text-align: center;
+    margin: 1.5em 0 1em; /* Cambiado a em */
+}
+
+.register_link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register_link p a:hover {
+    text-decoration: underline;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em; /* Cambiado a em */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 1.5em; /* Ajustar el espaciado en pantallas pequeñas */
+    }
+
+    .wrapper h1 {
+        font-size: 1.75rem; /* Ajustar el tamaño de fuente en pantallas pequeñas */
+    }
+
+    .input_box {
+        margin: 1.5em 0; /* Ajustar margen en pantallas pequeñas */
+    }
+
+    .btn {
+        height: 40px; /* Ajustar altura del botón en pantallas pequeñas */
+    }
+
+    .remember-forgot {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar contenido */
+    }
+}
+
+
+
+
+
+
+
+.wrapper2 {
+    width: 90%; /* Cambiado a porcentaje para ser más responsivo */
+    max-width: 600px; /* Limitar el ancho máximo */
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    padding: 2em; /* Usar em para el espaciado */
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+}
+
+.wrapper2 h1 {
+    font-size: 2.25rem; /* Cambiado a rem para ser más flexible */
+    text-align: center;
+}
+
+.wrapper2 .input_box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 1em 0; /* Cambiado a em para ser más flexible */
+}
+
+.wrapper2 .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem; /* Cambiado a rem */
+    margin: -1em 0 1em; /* Cambiado a em */
+}
+
+.wrapper2 .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 1rem; /* Cambiado a rem */
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper2 .register_link {
+    font-size: 0.9rem; /* Cambiado a rem */
+    text-align: center;
+    margin: 1.5em 0 1em; /* Cambiado a em */
+}
+
+.wrapper3 {
+    width: 90%; /* Cambiado a porcentaje para ser más responsivo */
+    max-width: 600px; /* Limitar el ancho máximo */
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    padding: 2em; /* Usar em para el espaciado */
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+}
+
+.wrapper3 h1 {
+    font-size: 2.25rem; /* Cambiado a rem para ser más flexible */
+    text-align: center;
+}
+
+.wrapper3 .input_box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 1em 0; /* Cambiado a em para ser más flexible */
+}
+
+.wrapper3 .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem; /* Cambiado a rem */
+    margin: -1em 0 1em; /* Cambiado a em */
+}
+
+.wrapper3 .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 1rem; /* Cambiado a rem */
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper3 .register_link {
+    font-size: 0.9rem; /* Cambiado a rem */
+    text-align: center;
+    margin: 1.5em 0 1em; /* Cambiado a em */
+}
+
+.msg_error {
+    margin: 2em; /* Cambiado a em para ser más flexible */
+    text-align: center;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .wrapper2, .wrapper3 {
+        padding: 1.5em; /* Ajustar el espaciado en pantallas pequeñas */
+    }
+
+    .wrapper2 h1, .wrapper3 h1 {
+        font-size: 1.75rem; /* Ajustar el tamaño de fuente en pantallas pequeñas */
+    }
+
+    .wrapper2 .btn, .wrapper3 .btn {
+        height: 40px; /* Ajustar altura del botón en pantallas pequeñas */
+    }
+}
