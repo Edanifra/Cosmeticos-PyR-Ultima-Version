@@ -39,23 +39,22 @@
     $bitacora = $row['total'];
 
     // Consulta para obtener productos con stock bajo
-    $sql = "SELECT p.nombre, SUM(df.cantidad) AS total_vendido
-            FROM detallefactura df
-            INNER JOIN producto p
-            ON df.codproducto = p.id_producto
-            WHERE df.codproducto != 115005451
-            GROUP BY df.codproducto
-            ORDER BY total_vendido DESC
-            LIMIT 15;"; // Cambia la condición según tu lógica
+    $sql = "SELECT c.nombre_categoria AS categoria, SUM(df.cantidad) AS total_vendido
+        FROM detallefactura df
+        INNER JOIN producto p ON df.codproducto = p.id_producto
+        INNER JOIN categoria_producto c ON p.id_categoria = c.id_categoria
+        WHERE df.codproducto != 115005451
+        GROUP BY c.id_categoria
+        ORDER BY total_vendido DESC
+        LIMIT 15;"; // Cambia la condición según tu lógica
     $resultado = mysqli_query($conn, $sql);
     
-    $productos = [];
-    while ($result = mysqli_fetch_assoc($resultado)) {
-        $productos[] = $result;
-    }
+    $categorias = [];
     
-    // Convertir el array a JSON
-    $productos_json = json_encode($productos);
+    while ($result = mysqli_fetch_assoc($resultado)) {
+        $categorias[] = $result;
+    }
+    $categorias_json = json_encode($categorias);
 
 ?>
 
@@ -210,10 +209,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Convertir el JSON a un objeto de JavaScript
-            const productos = <?php echo $productos_json; ?>;
+            const categorias = <?php echo $categorias_json; ?>;
             // Extraer las etiquetas y los datos
-            const labels = productos.map(producto => producto.nombre);
-            const data = productos.map(producto => producto.total_vendido);
+            const labels = categorias.map(cat => cat.categoria);
+            const data = categorias.map(cat => cat.total_vendido);
             console.log(labels); // Verifica los labels
             console.log(data); // Verifica los datos
             // Crear la primera gráfica
